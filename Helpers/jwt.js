@@ -1,5 +1,5 @@
 const jsonwebtoken = require("jsonwebtoken");
-const errorHandler = require("../Helpers/errorHandler");
+const errorHandler = require("./errorHandler");
 require("dotenv").config();
 
 const sign = payload => {
