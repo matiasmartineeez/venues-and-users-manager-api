@@ -2,7 +2,7 @@ const { check, validationResult } = require("express-validator");
 
 /* Validations */
 // Venues
-exports.venue = check("venue").isLength({ min: 6 });
+exports.venue = check("venue").custom(value => !isNaN(value));
 
 // Clients
 exports.client = check("client").isLength({ min: 6 });

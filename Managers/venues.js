@@ -11,7 +11,11 @@ let Venues = [
 const listVenues = () => Venues;
 
 // Get venue by id
-const getVenue = venue_id => _.find(Venues, ["id", venue_id]);
+const getVenue = venue_id => {
+  const venue = Venues.find(v => v.id == venue_id);
+
+  return venue;
+};
 
 // Add a venue to venues list
 const addVenue = venue => {

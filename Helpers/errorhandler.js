@@ -1,5 +1,5 @@
-exports.generic = (res, msg) => {
-  return res.status(422).json({
+exports.generic = (res, msg, code) => {
+  return res.status(code).json({
     message: "Error",
     error: msg
   });
@@ -13,8 +13,9 @@ exports.unauthorized = (res, msg) => {
 };
 
 exports.customError = class customError extends Error {
-  constructor(args) {
+  constructor(args, code) {
     super(args);
+    this.code = code;
     this.name = "customError";
   }
 };
