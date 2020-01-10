@@ -1,6 +1,6 @@
-const { customError } = require('../Helpers/errorhandler')
+const { customError } = require('../helpers/errorhandler')
 // Get venues manager to manage venues
-const venues_manager = require("../Managers/venues");
+const venues_manager = require("../managers/venues");
 
 
 exports.getVenuesList = async (req, res) => {

@@ -1,4 +1,4 @@
-const _ = require("lodash")._;
+const _ = require("./node_modules/lodash")._;
 
 let Venues = [
   { id: 1, name: "Rodelu" },

@@ -1,5 +1,5 @@
-const venues_service = require("../Services/venues");
-const { generic } = require("../Helpers/errorhandler");
+const venues_service = require("../services/venues");
+const { generic } = require("../helpers/errorhandler");
 
 exports.getVenuesList = async (req, res) => {
   try {

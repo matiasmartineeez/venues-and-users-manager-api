@@ -1,6 +1,6 @@
-const jsonwebtoken = require("jsonwebtoken");
+const jsonwebtoken = require("./node_modules/jsonwebtoken");
 const errorHandler = require("./errorhandler");
-require("dotenv").config();
+require("./node_modules/dotenv").config();
 
 const sign = payload => {
   return jsonwebtoken.sign(payload, process.env.JWT_SECRET, {

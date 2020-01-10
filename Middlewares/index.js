@@ -1,5 +1,5 @@
-const errorHandler = require("../Helpers/errorhandler");
-const jwt = require("../Helpers/jwt");
+const errorHandler = require("../helpers/errorhandler");
+const jwt = require("../helpers/jwt");
 
 const log = (req, res, next) => {
   console.log("====================================");

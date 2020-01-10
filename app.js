@@ -27,7 +27,7 @@ app.use(cors());
 app.use(helmet());
 
 /*** MIDDLEWARES ****/
-const appMiddleware = require("./Middlewares/");
+const appMiddleware = require("./middlewares");
 
 // Log request on develop
 ENVIROMENT === "dev" && app.use("/", appMiddleware.log);
@@ -36,7 +36,7 @@ ENVIROMENT === "dev" && app.use("/", appMiddleware.log);
 app.use("/", appMiddleware.auth);
 
 /*** ROUTES ****/
-const venues = require("./Routes/venues"); // Imports routes for venues
+const venues = require("./routes/venues"); // Imports routes for venues
 
 app.use("/venues", venues);
 

@@ -1,9 +1,9 @@
-const express = require("express");
+const express = require("./node_modules/express");
 const router = express.Router();
-const { validation, venue } = require("../Helpers/validators");
+const { validation, venue } = require("../helpers/validators");
 
 // CONTROLLER
-const venue_controller = require("../Controllers/venues");
+const venue_controller = require("../controllers/venues");
 
 // Get venues
 router.get("/list", venue_controller.getVenuesList);

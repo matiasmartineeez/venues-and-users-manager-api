@@ -1,4 +1,4 @@
-const { check, validationResult } = require("express-validator");
+const { check, validationResult } = require("./node_modules/express-validator");
 
 /* Validations */
 // Venues
