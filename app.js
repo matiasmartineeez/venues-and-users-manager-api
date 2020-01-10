@@ -36,7 +36,7 @@ ENVIROMENT === "dev" && app.use("/", appMiddleware.log);
 app.use("/", appMiddleware.auth);
 
 /*** ROUTES ****/
-const venues = require("./routes/venues"); // Imports routes for venues
+const venues = require("./Routes/venues"); // Imports routes for venues
 
 app.use("/venues", venues);
 
