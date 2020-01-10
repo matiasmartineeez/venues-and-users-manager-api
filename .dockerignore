@@ -7,4 +7,3 @@ npm-debug.log
 .gitignore
 .env.example
 package-lock.json
-package.json
