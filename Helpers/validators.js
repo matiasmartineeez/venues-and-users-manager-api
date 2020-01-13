@@ -1,11 +1,12 @@
-const { check, validationResult } = require("./node_modules/express-validator");
+const { check, validationResult } = require("express-validator");
 
 /* Validations */
-// Venues
+// Identificators
 exports.venue = check("venue").custom(value => !isNaN(value));
+exports.client = check("client").custom(value => !isNaN(value));
 
-// Clients
-exports.client = check("client").isLength({ min: 6 });
+// Validations
+exports.name = check("name").isLength({ min: 3 });
 
 exports.validation = (req, res, next) => {
   const errors = validationResult(req);

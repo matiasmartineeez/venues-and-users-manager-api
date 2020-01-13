@@ -29,3 +29,17 @@ exports.getVenueById = async (req, res) => {
       : generic(res, "");
   }
 };
+
+exports.addVenue = async (req, res) => {
+  try {
+    const venue = await venues_service.addVenue(req, res);
+
+    return venue && venue.error
+      ? res.status(200).jsonp({ error: venue.error })
+      : res.status(200).jsonp(venue);
+  } catch (err) {
+    return err.name === "customError"
+      ? generic(res, err.message, err.code)
+      : generic(res, "");
+  }
+};

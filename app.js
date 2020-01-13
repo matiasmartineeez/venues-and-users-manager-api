@@ -37,8 +37,12 @@ app.use("/", appMiddleware.auth);
 
 /*** ROUTES ****/
 const venues = require("./routes/venues"); // Imports routes for venues
+const clients = require("./routes/clients"); // Imports routes for venues
+
 
 app.use("/venues", venues);
+app.use("/clients", clients);
+
 
 /*** SERVER ****/
 
